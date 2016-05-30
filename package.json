@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-nprogress",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "Ember-cli addon wrapper for NProgress",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -40,7 +40,8 @@
     "loader.js": "^4.0.0"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "nprogress"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.5"
