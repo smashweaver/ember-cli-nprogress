@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-nprogress",
   "version": "0.0.1",
-  "description": "Ember-cli addon wrapper for NProgress",
+  "description": "Ember-cli addon for NProgress",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,11 +11,14 @@
     "start": "ember server",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smashweaver/ember-cli-nprogress.git"
+  },
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Jason D. Jimenez",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.2.0",
