@@ -2,7 +2,7 @@
 This ember-cli addon simplifies integration of NProgress plugin with ember-cli apps.
 
 ## Installation
-* npm install --save ember-cli-nprogress
+* ember install ember-cli-nprogress
 
 ## Usage
 <pre>
