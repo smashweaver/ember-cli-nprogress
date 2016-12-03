@@ -1,1 +1,1 @@
-export default window.NProgress;
+export { default } from 'nprogress';

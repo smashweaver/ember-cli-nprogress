@@ -11,7 +11,11 @@ module.exports = {
 
     debug('Importing NProgress files!');
 
-    app.import(app.bowerDirectory + '/nprogress/nprogress.js');
+    app.import(app.bowerDirectory + '/nprogress/nprogress.js', {
+      using: [
+        { transformation: 'amd', as: 'nprogress' }
+      ]
+    });
     app.import(app.bowerDirectory + '/nprogress/nprogress.css');
 
     debug('Imported NProgress files!');
