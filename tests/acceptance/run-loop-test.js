@@ -13,12 +13,15 @@ moduleForAcceptance('Acceptance | run loop', {
   }
 });
 
+// This is required to get the app set up
 test('loading an initial route', function(assert) {
   assert.expect(0);
 
   visit('/');
 });
 
+// This test just verifies that an error is not produced in cases where `nprogress`
+// is running while the app is being torn down
 test('it fires the `start` event within the run loop', function(assert) {
   visit('/');
 
