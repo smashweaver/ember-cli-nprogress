@@ -1,12 +1,18 @@
 # ember-cli-nprogress
+
 This ember-cli addon simplifies integration of NProgress plugin with ember-cli apps.
 
 ## Installation
-* ember install ember-cli-nprogress
+
+```bash
+ember install ember-cli-nprogress
+```
+
+**Note:** Version `2.9.0` or higher of the Ember CLI is required
 
 ## Usage
-<pre>
-<code>
+
+```javascript
 import Ember from 'ember';
 import progress from 'ember-cli-nprogress';
 
@@ -21,23 +27,8 @@ export default Ember.Route.extend({
     });
   }
 });
-</code>
-</pre>
-
-## Running
-* `ember server`
-* Visit your app at http://localhost:4200.
-
-## Running Tests
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
-
+```
 
 ## API
+
 See [rstacruz/nprogress](https://github.com/rstacruz/nprogress) for details.
