@@ -10,8 +10,9 @@ ember install ember-cli-nprogress
 
 **Note:** Version `2.9.0` or higher of the Ember CLI is required
 
-## Usage
+## Usage Examples
 
+### Showing `NProgress` while a model loads
 ```javascript
 import Ember from 'ember';
 import progress from 'ember-cli-nprogress';
@@ -29,6 +30,30 @@ export default Ember.Route.extend({
 });
 ```
 
+### Showing `NProgress` during all [loading substates][ember-loading-substates]
+
+```javascript
+// app/routes/application.js
+
+import Ember from 'ember';
+import nprogress from 'ember-cli-nprogress'
+
+export default Ember.Route.extend({
+  actions: {
+    loading(transition) {
+      nprogress.start();
+
+      transition.finally(() => {
+        nprogress.done();
+      });
+    }
+  }
+});
+```
+
 ## API
 
-See [rstacruz/nprogress](https://github.com/rstacruz/nprogress) for details.
+See [rstacruz/nprogress][nprogress] for details.
+
+[nprogress]: https://github.com/rstacruz/nprogress
+[ember-loading-substates]: https://guides.emberjs.com/v2.10.0/routing/loading-and-error-substates/#toc_code-loading-code-substates
