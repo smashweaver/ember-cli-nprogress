@@ -46,6 +46,8 @@ export default Ember.Route.extend({
       transition.finally(() => {
         nprogress.done();
       });
+
+      return true;
     }
   }
 });
