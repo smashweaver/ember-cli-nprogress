@@ -20,7 +20,7 @@ module.exports = {
   name: 'ember-cli-nprogress',
 
   included: function() {
-    this._super.included.apply(this, arguments);
+    this._super(arguments);
 
     debug('Importing NProgress files!');
 
