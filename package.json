@@ -46,7 +46,8 @@
   },
   "dependencies": {
     "debug": "^2.3.3",
-    "ember-cli-babel": "^5.1.7"
+    "ember-cli-babel": "^5.1.7",
+    "nprogress": "alexlafroscia/nprogress#allow-alternate-scheduler"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"

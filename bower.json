@@ -2,7 +2,6 @@
   "name": "ember-cli-nprogress",
   "dependencies": {
     "ember": "~2.10.0",
-    "ember-cli-shims": "0.1.3",
-    "nprogress": "alexlafroscia/nprogress#allow-alternate-scheduler"
+    "ember-cli-shims": "0.1.3"
   }
 }
