@@ -2,7 +2,6 @@
 'use strict';
 
 const path = require('path');
-const map = require('broccoli-stew').map;
 const Funnel = require('broccoli-funnel');
 const MergeTrees = require('broccoli-merge-trees');
 const debug = require('debug')('ember-cli-nprogress:addon');
