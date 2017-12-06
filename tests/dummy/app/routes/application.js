@@ -1,7 +1,5 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
 import nprogress from 'nprogress';
-
-const { Route } = Ember;
 
 export default Route.extend({
   actions: {

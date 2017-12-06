@@ -1,7 +1,5 @@
-import Ember from 'ember';
+import { run } from '@ember/runloop';
 import nprogress from 'nprogress';
-
-const { run } = Ember;
 
 export const scheduler = run.later.bind(undefined, undefined);
 

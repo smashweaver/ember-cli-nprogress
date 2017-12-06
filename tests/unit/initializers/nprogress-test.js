@@ -1,4 +1,5 @@
-import Ember from 'ember';
+import Application from '@ember/application';
+import { run } from '@ember/runloop';
 import { module, test } from 'qunit';
 
 import NprogressInitializer from 'dummy/initializers/nprogress';
@@ -9,8 +10,8 @@ let application;
 
 module('Unit | Initializer | nprogress', {
   beforeEach() {
-    Ember.run(function() {
-      application = Ember.Application.create();
+    run(function() {
+      application = Application.create();
       application.deferReadiness();
     });
   }
