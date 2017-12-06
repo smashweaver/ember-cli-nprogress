@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import nprogress from 'ember-cli-nprogress';
+import nprogress from 'nprogress';
 
 const { run } = Ember;
 

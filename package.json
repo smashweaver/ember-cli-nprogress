@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-nprogress",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Ember-cli addon for NProgress",
   "keywords": [
     "ember-addon",
@@ -44,7 +44,6 @@
     "ember-load-initializers": "^1.0.0",
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.15.0",
-    "ember-welcome-page": "^3.0.0",
     "loader.js": "^4.2.3"
   },
   "engines": {

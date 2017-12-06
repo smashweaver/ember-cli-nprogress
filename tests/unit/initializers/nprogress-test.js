@@ -3,7 +3,7 @@ import { module, test } from 'qunit';
 
 import NprogressInitializer from 'dummy/initializers/nprogress';
 import { scheduler } from 'ember-cli-nprogress/initializers/nprogress';
-import nprogress from 'ember-cli-nprogress';
+import nprogress from 'nprogress';
 
 let application;
 

@@ -36,7 +36,7 @@ export default Ember.Route.extend({
 // app/routes/application.js
 
 import Ember from 'ember';
-import nprogress from 'ember-cli-nprogress'
+import nprogress from 'nprogress'
 
 export default Ember.Route.extend({
   actions: {

@@ -1,4 +1,4 @@
-import nprogress from 'ember-cli-nprogress';
+import nprogress from 'nprogress';
 import { module, test } from 'qunit';
 
 module('Unit | Utility | nprogress');

@@ -1,7 +1,7 @@
 import { test } from 'qunit';
 import moduleForAcceptance from '../../tests/helpers/module-for-acceptance';
 
-import nprogress from 'ember-cli-nprogress';
+import nprogress from 'nprogress';
 
 // Note: This somewhat unorthidox test setup will throw an error when running the tests in Chrome,
 // if `nprogress` isn't configured to run within the Ember run loop
