@@ -5,6 +5,7 @@ const path = require('path');
 const Funnel = require('broccoli-funnel');
 const MergeTrees = require('broccoli-merge-trees');
 const debug = require('debug')('ember-cli-nprogress:addon');
+const FastbootTransform = require('fastboot-transform');
 
 /* identical to ember-cli/lib/models/addon.js's `_findHost` */
 /* used instead of breaking backwards compat. w/ older versions of cli */
@@ -29,10 +30,11 @@ module.exports = {
 
     var host = findHost(this);
 
-    host.import('vendor/nprogress/nprogress.js', {
-      using: [
-        { transformation: 'amd', as: 'nprogress' }
-      ]
+    host.import('vendor/nprogress/nprogress.js');
+    host.import('vendor/nprogress-shim.js', {
+      exports: {
+        nprogress: ['default']
+      }
     });
 
     host.import('vendor/nprogress/nprogress.css');
@@ -42,16 +44,24 @@ module.exports = {
 
   treeForVendor(vendorTree) {
     const trees = [];
-    const nprogressTree = new Funnel(path.dirname(require.resolve('nprogress/nprogress.js')), {
-      files: ['nprogress.js', 'nprogress.css'],
+
+    const nprogressJs = FastbootTransform(new Funnel(path.dirname(require.resolve('nprogress/nprogress.js')), {
+      files: ['nprogress.js'],
       destDir: 'nprogress'
-    });
+    }));
+
+    const nprogressCss = new Funnel(path.dirname(require.resolve('nprogress/nprogress.js')), {
+      files: ['nprogress.css'],
+      destDir: 'nprogress'
+    })
 
     if (vendorTree !== undefined) {
       trees.push(vendorTree);
     }
 
-    trees.push(nprogressTree);
+    trees.push(nprogressJs);
+
+    trees.push(nprogressCss);
 
     return new MergeTrees(trees);
   }
