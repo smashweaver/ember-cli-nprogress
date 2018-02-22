@@ -4,7 +4,9 @@ import nprogress from 'nprogress';
 export const scheduler = run.later.bind(undefined, undefined);
 
 export function initialize() {
-  nprogress.configure({ scheduler });
+  if (typeof FastBoot === 'undefined') {
+    nprogress.configure({ scheduler });
+  }
 }
 
 export default {

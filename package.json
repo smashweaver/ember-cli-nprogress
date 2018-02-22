@@ -24,6 +24,7 @@
   "dependencies": {
     "debug": "^2.3.3",
     "ember-cli-babel": "^6.6.0",
+    "fastboot-transform": "^0.1.2",
     "nprogress": "alexlafroscia/nprogress#allow-alternate-scheduler"
   },
   "devDependencies": {

@@ -15,15 +15,15 @@ ember install ember-cli-nprogress
 ### Showing `NProgress` while a model loads
 ```javascript
 import Ember from 'ember';
-import progress from 'ember-cli-nprogress';
+import nprogress from 'nprogress';
 
 export default Ember.Route.extend({
   model(params){
-    progress.start();
+    nprogress.start();
 
     let promise = this.store.findRecord('post', params.id);
     return promise.then(function(post){
-      progress.done();
+      nprogress.done();
       return post;
     });
   }
